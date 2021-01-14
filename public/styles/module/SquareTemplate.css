@@ -1,0 +1,22 @@
+.SquareContainer{
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(2, 1fr);
+  overflow: auto;
+}
+
+.square_w{
+    grid-column: span 1;
+}
+.square2w{
+    grid-column: span 2;
+}
+.square_h{
+    grid-row: span 1;
+}
+.square2h{
+    grid-row: span 2;
+}

@@ -1,0 +1,90 @@
+.topBtn{
+    width: 200px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    color: #09091a;
+    transition: all 1s !important;
+}
+.topBtn img{
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+}
+
+
+
+.geed_menu {
+position: absolute;
+top:0;
+left:0;
+width: 100%;
+height: 100%;
+z-index: 1001;
+background-color: rgba(255, 255, 255, 0.9);
+display: none;
+overflow: hidden;
+}
+.geed_menu_active {
+display: block;
+}
+
+.container_menu {
+position: absolute;
+top: 70px;
+left: 0;
+right: 10px;
+bottom: 0;
+padding-top: 10px;
+padding-right: 0;
+}
+.container_menu div{
+background-color: rgba(255, 255, 255, 1);
+}
+
+.divInputSearch {
+position: absolute;
+display: none;
+top: 10px;
+left: 10px;
+right: calc(1% + 20px);
+height: 50px;
+text-align: center;
+}
+
+.search-menu-active {
+display: flex;
+justify-content: center;
+align-self: center;
+}
+.divInputSearchText {
+display: flex;
+justify-content: center;
+align-self: center;
+color: white;
+}
+
+.close_category_menu {
+position: absolute;
+top: 12px;
+right: 8px;
+}
+@media (max-width: 780px) {
+.span {
+    margin-left: 100px;
+}
+.centerMobile{
+    justify-content: center;
+}
+}
+
+@media (max-width: 1000px) {
+.span {
+    margin-left: 50px;
+}
+.divLogo_step1 {
+    transform: translateX(10vw);
+}
+}

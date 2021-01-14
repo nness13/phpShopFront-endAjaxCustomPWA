@@ -1,0 +1,7 @@
+AddDefaultCharset utf-8
+
+
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^images/responsive/([^/]+)/(.+\_([^/]+).(jpe?g|gif|png))$ ../application/lib/responsive.php?preset=$1&file=$2&scale=$3 [NC]

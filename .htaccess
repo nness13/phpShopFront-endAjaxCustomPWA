@@ -1,0 +1,27 @@
+AddDefaultCharset utf-8
+
+#AddType text/cache-manifest .appcache
+
+# php_flag log_errors on
+# php_value error_log /home/u906713277/domains/mejeen.com/public_html/error_log.txt
+
+RewriteEngine on
+Options All -Indexes
+
+RewriteCond %{HTTP_REFERER} !^$
+RewriteCond %{HTTP_REFERER} !^http(s)?://(www\.)?mecatalog.tk [NC]
+RewriteRule \.(jpg|jpeg|png|gif)$ - [NC,F,L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php
+
+<filesMatch ".(css|jpg|jpeg|png|gif|js|ico)$">
+Header set Cache-Control "no-cache, public"
+</filesMatch>
+# DO NOT REMOVE THIS LINE AND THE LINES BELOW SSL_REDIRECT:mecatalog.tk
+RewriteEngine on
+RewriteCond %{HTTPS} off
+RewriteCond %{HTTP_HOST} ^mecatalog.tk$
+RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+    # DO NOT REMOVE THIS LINE AND THE LINES ABOVE SSL_REDIRECT:mecatalog.tk

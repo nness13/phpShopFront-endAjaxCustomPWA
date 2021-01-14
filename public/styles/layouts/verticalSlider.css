@@ -1,0 +1,98 @@
+.navBar{
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+.logoBox{
+  height: 70px;
+  width: 100px;
+  display: flex;
+  margin: 0 10px;
+  justify-content: start;
+  align-items: center;
+}
+.topBtn{
+  width: 200px;
+  height: 44px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #09091a;
+}
+.logoBox img{
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+.topBoxImgText{
+  font-size: 35px;
+  padding-top: 5px;
+  transform: translateX(-6px);
+  cursor: pointer;
+}
+.navRightBox{
+  position: absolute;
+  right: 10px;
+  top: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.signUpButton{
+  border-radius: 20px;
+  background-color: #a4d7c7;
+  color: #fff;
+  font-size: 13px;
+  text-decoration: none;
+  padding: 12px 25px 10px;
+  /*margin-right: 10px;*/
+  text-align: center;
+  font-family: AvenirMedium,sans-serif;
+}
+
+
+.sliderOject{
+  width: 100vw;
+  height: calc(100vh - 4px);
+}
+.sliderOject img{
+  height: auto !important;
+  width: 100vw !important;
+}
+.slick-dotted.slick-slider {
+  margin-bottom: 0 !important;
+}
+.slick-vertical .slick-slide {
+  border: none !important;
+}
+.slick-dots {
+  right: 5px;
+  top: calc(100vh);
+  bottom: 0 !important;
+  height: 20px;
+  width: calc(100vh - 25px) !important;
+
+  transform-origin: 100% 0;
+  transform: rotateZ(90deg);
+  transition: all 1s;
+}
+
+@media (max-width: 780px) {
+  .navBar {
+    position: relative;
+  }
+  .sliderOject{
+    height: calc(100vh - 75px);
+  }
+  .slick-dots {
+    top: calc(100vh - 70px)!important;
+    width: calc(100vh - 70px) !important;
+  }
+  .sliderOject img{
+    height: 100vh !important;
+    width: auto !important;
+  }
+}
+

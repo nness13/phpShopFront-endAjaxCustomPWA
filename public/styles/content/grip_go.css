@@ -1,0 +1,39 @@
+.sliderOject{
+    overflow: hidden;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+}
+.two_video_slide{
+    width: 100vw;
+    height: 100vh;
+    background: white;
+
+}
+.two_video_slide video{
+    height: 80vh;
+}
+.wraper_main_slide{
+
+}
+.obzor_button{
+    position: absolute;
+    width: 180px;
+    text-align: center;
+    top: 22%;
+    cursor: pointer;
+    left: calc(100% - 84px - 50%);
+    font-size: 30px;
+    /*background: white;*/
+    padding: 20px;
+    border: 4px double black;
+}
+
+@media (max-width: 780px) {
+    .two_video_slide video{
+        width: 100vw;
+    }
+    .sliderItem{
+        height: 100vh !important;
+    }
+}

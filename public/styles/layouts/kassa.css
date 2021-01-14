@@ -1,0 +1,365 @@
+*{
+    font-family: arial sans-serif;
+}
+.sarabun{
+  box-sizing: border-box;
+  letter-spacing: .4em;
+  text-transform: uppercase;
+  font-weight: 200;
+  color: black;
+  text-decoration: none;
+}
+
+/*Основні блоки*/
+body {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  font-size: .95em;
+  margin: 0;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 50px repeat(10, 1fr) 50px;
+  grid-template-rows: 30px 40px auto 20px;
+  grid-template-areas:
+    "l t t t t t t t t t t s"
+    "l m m m m m m m m m m m"
+    "l c c c c c c c c c c c"
+    "l c c c c c c c c c c c";
+  transition: all 1s;
+}
+
+/* Grid-template-areas: topPanel*/
+.topPanel{
+  /*background: black;*/
+  grid-area: t;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 60px;
+  padding-right: calc(2% + 5px );
+  box-shadow: 0 5px 5px rgba(0,0,0,.2);
+}
+
+  #thismap{
+    grid-area: m;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .searchDiv{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: calc(2.1% + 40px);
+  }
+  /*Пошук*/
+  .searchInput {
+    position: absolute;
+    border-radius: 50px;
+    border: 1px solid;
+    width: 20px;
+    height: 20px;
+    visibility: visible;
+    transition: all 1s;
+  }
+  .lineLupe {
+    position: absolute;
+    border-top: 2px solid;
+    width: 7px;
+    height: 7px;
+    transform: rotate(45deg) translateX(14px) translateY(1px);
+  }
+  .searchInputActive {
+    transform: translateX( -96px );
+    padding: 4px;
+    width: 200px;
+  }
+  .searchDiv img{
+    display: block;
+    box-sizing: content-box;
+    width: 20px;
+    object-fit: cover;
+  }
+  .iconMyPanel{
+    cursor: pointer;
+  }
+  .iconMyPanel img{
+    width: 25px;
+    height: 25px;
+    border-radius: 50px;
+  }
+
+/* Grid-template-areas: searchDiv*/
+.rightTopDiv{
+  grid-area: s;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 5px 5px rgba(0,0,0,.2);
+
+}
+
+
+/* Grid-template-areas: leftPanel*/
+.leftPanel{
+  background: white;
+  grid-area: l;
+  display: block;
+  width: 50px;
+  z-index: 11;
+  position: relative;
+  transition: width 1s, visibility 1s, background 1s !important;
+}
+/* Активний стан */
+  .leftPanel.active{
+    width: 220px;
+  }
+  #abroad{
+    position: absolute;
+    top: 0;
+    left: 220px;
+    right: 0;
+    bottom: 0;
+    z-index: 100;
+    display: none;
+  }
+  #abroad.active{
+    display: block;
+  }
+/* Внутрішні обєкти */
+  .topBox{
+    height: 30px;
+    display: flex;
+    padding: 0 10px;
+    justify-content: start;
+    align-items: center;
+    box-shadow: 0 5px 5px rgba(0,0,0,.2);
+    transition: all 1s !important;
+  }
+  .leftPanel.active .topBox {
+    background: #09091a;
+  }
+
+.leftPanel.active .topBtn{
+    background: #09091a;
+    /*color: #f1f1f1;*/
+    /*padding: 0 5px;*/
+  }
+  .idReversIcon{
+    /*border-top: 1px solid #09091a;*/
+  }
+  .idReversIcon i{
+    cursor: pointer;
+    padding: 10px !important;
+  }
+  .box {
+    height: calc(100% - 30px);
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    transition: all 1s;
+    overflow: hidden;
+    padding: 0 5px;
+  }
+  .leftPanel.active .box {
+    background: #09091a;
+  }
+  .box a{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .box i{
+    padding: 16px 10px;
+    transition: all 1s;
+  }
+  .leftPanel.active .box i{
+    color: #276ef1;
+    padding: 16px 25px 16px 20px;
+  }
+
+  .leftPanel.active .topBoxImgText{
+    color: #f1f1f1;
+  }
+  .box a span{
+    margin: 10px;
+    white-space: nowrap;
+    font-family: ff-clan-web-pro,"Helvetica Neue",Helvetica,sans-serif;
+  }
+  .box a.active i{
+    color: #09091a !important;
+    /*animation: 1s ease-out 0s 1 slideInFromBottomActive;*/
+  }
+
+/*Меню*/
+.menuButton{
+  position: relative;
+  border: none !important;
+  width: 16px;
+  height: 16px;
+  padding: 0;
+  margin-left: auto;
+  margin-right: 0;
+  background: none;
+  outline: none;
+}
+button:hover{
+  cursor: pointer;
+}
+.menu-icon {
+  width: 16px;
+  height: 1px;
+  border: none !important;
+  background: black;
+  position: relative;
+  transform: translateY(-700%);
+  transition: opacity .2s ease-in-out;
+}
+.menu-icon::after {
+  content: '';
+  width: 6px;
+  height: 1px;
+  background: black;
+  position: absolute;
+  top: 10px;
+  left: 0;
+}
+.menu-icon::before{
+  content: '';
+  width: 10px;
+  height: 1px;
+  background: black;
+  position: absolute;
+  top: 5px;
+  left: 0;
+}
+
+/*Для телефону*/
+@media (max-width: 780px) {
+  #map{
+    max-width: calc(100vw - 150px);
+  }
+  .searchInputActive {
+    transform: translateX(calc((-100vw/2) + 75px));
+    width: calc(100vw - 100px);
+    height: 40px;
+    border-radius: 0;
+    border: 0;
+  }
+  .footer{
+    justify-content: center;
+  }
+}
+
+/*Для планшету*/
+@media (max-width: 1100px) {
+
+}
+
+/* Animation Stuff */
+@keyframes slideInFromLeft{
+  0%{
+    transform: translateX(-130%);
+  }
+  100%{
+    transform: translateX(0);
+  }
+}
+@keyframes slideInFromRight{
+  0%{
+    transform: translateX(100%);
+  }
+  100%{
+    transform: translateX(0);
+  }
+}
+@keyframes slideInFromBottom{
+  0%{
+    transform: translateY(300%);
+  }
+  100%{
+    transform: translateY(0);
+  }
+}
+@keyframes slideInFromBottomActive{
+  0%{
+    padding-bottom: 300px;
+  }
+  100%{
+  }
+}
+@keyframes slideInFromTop{
+  0%{
+    opacity: 0;
+    margin-bottom: -100%;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+@keyframes fadeIn{
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes hidden{
+  0% {
+    visibility: hidden;
+  }
+  100% {
+    visibility: hidden;
+  }
+}
+
+@keyframes positionEn {
+    0%{position: relative;}
+    100% {position: absolute;}
+}
+
+
+/* Вільні класи */
+.centerItem {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+/* squareSlide*/
+.registerBox {
+  transform: translateX(-20%);
+  visibility: hidden;
+  opacity: 0;
+  overflow: hidden;
+  transition: all 1s;
+  position: absolute;
+}
+
+.slide-registerBox {
+  transform: translateX(0);
+  visibility: visible;
+  overflow: visible;
+  opacity: 1;
+  width: 96%;
+  z-index: 10;
+}
+.authBox {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
+}
+.slide-authBox {
+  visibility: hidden;
+  transform: translateY(50%);
+  opacity: 0;
+}
+
+.description_tag{
+  height: 150px;
+  position: relative;
+}

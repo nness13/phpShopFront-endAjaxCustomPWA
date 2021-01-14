@@ -1,0 +1,99 @@
+{
+
+
+	"global":{
+
+		"clientlabel": "IE Corp Presents : "
+
+	},
+
+	"proposals":[
+
+
+		{
+			"primarycovertextcolor": "#FFFFFF",
+			"toptextcolor":"#FFFFFF",
+			"bottomtextcolor":"#FFFFFF",
+			"client":"Jeen",
+			"title":"Монопод Insta360",
+			"newtitle":"Монопод Xiaomi",
+			"newtitlemarkerstart":3,
+			"newtitlemarkerlength":9,
+			"coverimage":"public/images/responsive/paper/cover4",
+			"logoimage":"public/images/responsive/content/logog",
+			"coverinsidecolor":"#5e5a55"
+		}
+
+	],
+
+	"sections":{
+
+
+
+		"hero": {
+			"title":"Media Jeen",
+			"subheader":"Тут ми хотіли б розповісти про нас",
+			"urlHeroImg":"public/images/responsive/photo/top_hero",
+			"urlLeftImg":"public/images/responsive/photo/top_right",
+			"urlRightImg":"public/images/responsive/photo/top_left"
+		},
+		"intro": {
+
+			"uppertitle":"Знаходь поставщиків - онлайн",
+
+			"title":"Заключи договори",
+			"subheader":"Та автоматизуй поставки",
+			"subtitle":"З допомогою сервісів\nJeen",
+
+			"bottomtitle":"Ось як це працює : "
+		},
+		"import": {
+			"title":"Оптимізуй бізнес",
+			"subheader":"Та організуй зручне управління",
+
+			"bannercampaign": "public/images/responsive/content/bannercampaign",
+			"brandexperience": "public/images/responsive/content/brandexperience",
+			"collaborateImg2": "public/images/responsive/content/collaborate2",
+			"collaborateImg3": "public/images/responsive/content/collaborate3",
+			"collaborateImg4": "public/images/responsive/content/collaborate4",
+			"collaborateImg5": "public/images/responsive/content/collaborate5",
+			"collaborateImg6": "public/images/responsive/content/collaborate6",
+			"digitalidentity": "public/images/responsive/content/digitalidentity",
+			"responsivewebsiteempty": "public/images/responsive/content/responsivewebsiteempty",
+			"ecommerce": "public/images/responsive/content/ecommerce"
+		},
+		"refine": {
+			"title":"Знаходь партнерів легко",
+			"subheader":"Створи аккаунт, додай товари\nта налаштуй сервіси Geed "
+		},
+		"reuse": {
+			"title":"Кращі рішення",
+			"subheader":"Для правильного використання твого часу"
+		},
+		"collaborate": {
+			"title":"Співпрацювати",
+			"subheader": "Робота з твоїми партнерами\nможе стати краще з Geed",
+			"collaborateImg": "public/images/responsive/photo/collaborate",
+			"comments": [
+				{"name":"Чайник - поставщик", "text":"Чайник: тестовий проект сервісу Geed\nпоставщик чаю закладів в Україні\nрезультат показав 40% економії часу\nта 60% збільшення продуктивності!"},
+				{"name":"Андрій - клієнт", "text":"Студент, створив магазин SportoGolik\nта заробляє від 10 до 15 тисяч гривень\nщомісячно, відновив успіхи у навчанні\nпісля початку співпраці з Geed"},
+				{"name":"SportoGolikcom - дистрибютер", "text":"SportoGolikcom - інтернет магазин\nтоварів на спортивну тематику,\nспівпрацює з партнерами Geed\nта задоволений результатом"}
+				
+			]
+		},
+		"done": {
+			"title":"Готовий?",
+			"subheader": "Зареєструйся та налаштуй свій бізнес"
+		},
+		"cover": {
+			"header":"Проект",
+			"bottom": ""
+		}
+
+
+
+
+	}
+
+
+}

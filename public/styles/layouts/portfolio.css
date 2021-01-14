@@ -1,0 +1,66 @@
+.navBar{
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+.logoBox{
+  height: 70px;
+  width: 100px;
+  display: flex;
+  margin: 0 10px;
+  justify-content: start;
+  align-items: center;
+}
+.topBtn{
+  width: 200px;
+  height: 44px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #09091a;
+}
+.logoBox img{
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+.topBoxImgText{
+  font-size: 35px;
+  padding-top: 5px;
+  cursor: pointer;
+}
+.navRightBox{
+  position: absolute;
+  right: 10px;
+  top: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.signUpButton{
+  border-radius: 20px;
+  background-color: #a4d7c7;
+  color: #fff;
+  font-size: 13px;
+  text-decoration: none;
+  padding: 12px 25px 10px;
+  /*margin-right: 10px;*/
+  text-align: center;
+  font-family: AvenirMedium,sans-serif;
+}
+  /*Контент-slider*/
+.canvas{
+  position: relative;
+  /*width: 100vw;*/
+  /*height: calc(100vh - 70px);*/
+  display: block;
+}
+
+@media (max-width: 780px) {
+  .navBar {
+    position: relative;
+  }
+
+}
